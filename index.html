@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <title>Sky Hop</title>
+  <!-- Dev: CDN ok. Before portal upload, switch to ./libs/phaser.min.js -->
+  <script src="https://unpkg.com/phaser@3.70.0/dist/phaser.min.js"></script>
+  <style>
+    html, body { height: 100%; margin: 0; background: #0b0f1a; }
+    #game { width: 100%; height: 100%; touch-action: none; }
+    .credits {
+      position: fixed; left: 8px; bottom: 8px; color:#99a2c2; font: 12px/1.3 system-ui;
+      opacity:.85; user-select:none; pointer-events:none;
+    }
+    .pause {
+      position: fixed; right: 10px; top: 10px; z-index: 2;
+      font: 14px/1 system-ui; color: #e7ecff; background:#1a2140; border:1px solid #2a3466;
+      padding: 8px 10px; border-radius: 10px; cursor: pointer; opacity:.95;
+    }
+  </style>
+</head>
+<body>
+  <div id="game"></div>
+  <button class="pause" id="pauseBtn" aria-label="Pause/Resume (P)">⏸ Pause</button>
+  <div class="credits">Sky Hop · Tap/Space to jump · Double‑tap = Wind Dash</div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
